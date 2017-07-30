@@ -23,4 +23,8 @@ export class ShoppingListComponent implements OnInit {
     )
   }
 
+  triggerCheck () {
+    console.log('lol');
+  }
+
 }
