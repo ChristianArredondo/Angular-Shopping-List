@@ -13,6 +13,7 @@ import { MenuToggleDirective } from './shared/menu-toggle.directive';
 import { ShoppingService } from './shopping-list/shopping.service';
 import { AppRoutingModule } from './app-routing.module';
 import { RecipeStartComponent } from './recipes/recipe-start/recipe-start.component';
+import { RecipeEditComponent } from './recipes/recipe-edit/recipe-edit.component';
 
 @NgModule({
   declarations: [
@@ -21,11 +22,13 @@ import { RecipeStartComponent } from './recipes/recipe-start/recipe-start.compon
     ShoppingListComponent,
     ShoppingListEditComponent,
     RecipesComponent,
+    RecipeEditComponent,
     RecipeListComponent,
     RecipeDetailComponent,
     RecipeItemComponent,
     RecipeStartComponent,
     MenuToggleDirective,
+    RecipeEditComponent,
   ],
   imports: [
     BrowserModule,
