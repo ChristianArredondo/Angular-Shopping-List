@@ -29,11 +29,15 @@ export class RecipeService {
 
   }
 
-  getRecipes() {
+  getRecipes () {
      return this.recipes.slice();
   }
 
-  onAddIngredientsToSL(ingredients: Ingredient[]) {
+  getRecipe (id: number) {
+    return this.recipes[id]
+  }
+
+  onAddIngredientsToSL (ingredients: Ingredient[]) {
     console.log('Check 2');
     this.shoppingService.onIngredientsAdded(ingredients);
   }

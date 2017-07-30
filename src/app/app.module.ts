@@ -11,6 +11,8 @@ import { RecipeDetailComponent } from './recipes/recipe-detail/recipe-detail.com
 import { RecipeItemComponent } from './recipes/recipe-list/recipe-item/recipe-item.component';
 import { MenuToggleDirective } from './shared/menu-toggle.directive';
 import { ShoppingService } from './shopping-list/shopping.service';
+import { AppRoutingModule } from './app-routing.module';
+import { RecipeStartComponent } from './recipes/recipe-start/recipe-start.component';
 
 @NgModule({
   declarations: [
@@ -22,10 +24,12 @@ import { ShoppingService } from './shopping-list/shopping.service';
     RecipeListComponent,
     RecipeDetailComponent,
     RecipeItemComponent,
-    MenuToggleDirective
+    RecipeStartComponent,
+    MenuToggleDirective,
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    AppRoutingModule
   ],
   providers: [ShoppingService],
   bootstrap: [AppComponent]
