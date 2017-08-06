@@ -2,7 +2,7 @@
 
 # PROJECT
 
-A web application that allows you to add new recipes and build up your shopping list at the same, made in conjunction with the Angular 4 tutorial on Udemy. This is an ongoing project with an estimated completion date of August 27th, and it was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.1.3.
+A web application that allows you to add new recipes and build up your shopping list at the same, made in conjunction with the Angular 4 tutorial on Udemy. This is an ongoing project with an estimated completion date of August 27th, and was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.1.3.
 
 ## Development server
 
