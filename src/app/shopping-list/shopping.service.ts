@@ -17,6 +17,7 @@ export class ShoppingService {
     onIngredientAdded(ingredient: Ingredient) {
         this.ingredients.push(ingredient);
         this.ingredientsAdded.next(this.ingredients.slice());
+        console.log(this.ingredients);
     }
 
     onIngredientsAdded(ingredients: Ingredient[]) {
