@@ -6,15 +6,9 @@
       <a
         class="list-group-item"
         style="cursor: pointer"
-        *ngFor="let ingredient of ingredients">
-        {{ ingredient.name }} ({{ ingredient.amount }})
-        <!-- <span
-          class="glyphicon glyphicon-remove"
-          style="float: right; color: #ba1010;"
-          (click)="triggerCheck()"></span> -->
-          <button type="button" class="btn btn-default btn-sm" style="float: right; margin: auto;">
-            <span class="glyphicon glyphicon-remove"></span> Remove
-          </button>
+        *ngFor="let ingredient of ingredients; let i = index"
+        (click)="onEditItem(i)">
+      {{ ingredient.name }} ({{ ingredient.amount }})
       </a>
     </ul>
   </div>
