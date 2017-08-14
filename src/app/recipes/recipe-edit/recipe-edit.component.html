@@ -34,7 +34,7 @@
       </div>
       <div class="row">
         <div class="col-xs-12">
-          <img [src]="recipeForm.imagePath" [alt]="recipeForm.description" class="img-responsive">
+          <img src="" alt="" class="img-responsive">
         </div>
       </div>
       <div class="row">
@@ -51,22 +51,36 @@
         </div>
       </div>
       <div class="row">
-        <div class="col-xs-12">
-          <div class="row">
+        <div class="col-xs-12" formArrayName="ingredients">
+          <div 
+            class="row form-group"  
+            *ngFor="let ingredientCtrl of recipeForm.get('ingredients').controls; let i = index"
+            [formGroupName]="i">
             <div class="col-xs-8">
               <input 
                 type="text"
                 class="form-control"
-                placeholder="Recipe item">
+                placeholder="Recipe item"
+                formControlName="name">
             </div>
             <div class="col-xs-2">
               <input 
                 type="text"
                 class="form-control"
-                placeholder="Amount">
+                placeholder="Amount"
+                formControlName="amount">
             </div>
             <div class="col-xs-2">
-              <button class="btn btn-danger">X</button>
+              <button class="btn btn-danger" type="button">X</button>
+            </div>
+          </div>
+          <hr>
+          <div class="row">
+            <div class="col-xs-12">
+              <button 
+                type="button"
+                class="btn btn-info btn-block" 
+                (click)="onAddIngredient()">Add Ingredient</button>
             </div>
           </div>
         </div>
