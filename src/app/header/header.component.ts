@@ -1,5 +1,8 @@
-import { Component, Output } from '@angular/core';
+import { Component, Output, Injectable } from '@angular/core';
+import { DataStorageService } from '../shared/data-storage.service';
+import { Headers, Http, Response } from '@angular/http/';
 
+@Injectable()
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
@@ -9,6 +12,17 @@ import { Component, Output } from '@angular/core';
 
 
 export class HeaderComponent {
+
+  constructor(
+    private dataStorageService: DataStorageService
+  ) {}
+
+  onStoreRecipes () {
+    this.dataStorageService.storeRecipes()
+      .subscribe(
+        (response: Response) => console.log(response)
+      )
+  }
 
 }
 
