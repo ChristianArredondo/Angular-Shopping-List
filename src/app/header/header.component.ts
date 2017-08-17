@@ -1,6 +1,7 @@
 import { Component, Output, Injectable } from '@angular/core';
 import { DataStorageService } from '../shared/data-storage.service';
 import { Headers, Http, Response } from '@angular/http/';
+import { AuthService } from '../auth/auth.service';
 
 @Injectable()
 @Component({
@@ -14,7 +15,8 @@ import { Headers, Http, Response } from '@angular/http/';
 export class HeaderComponent {
 
   constructor(
-    private dataStorageService: DataStorageService
+    private dataStorageService: DataStorageService,
+    private authService: AuthService
   ) {}
 
   onStoreRecipes () {
@@ -24,11 +26,11 @@ export class HeaderComponent {
       )
   }
 
+  onLogout () {
+    this.authService.logoutUser();
+  }
 
   onFetchRecipes () {
     this.dataStorageService.fetchRecipes();
   }
 }
-
-
-
