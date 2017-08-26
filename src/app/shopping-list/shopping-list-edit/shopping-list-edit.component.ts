@@ -8,7 +8,7 @@ import { Ingredient } from '../../shared/ingredient.model';
 import { ShoppingService } from '../shopping.service';
 import { NgForm, Form } from '@angular/forms';
 import { Subscription } from 'rxjs/Subscription';
-import { Store } from '@ngrx/store/src';
+import { Store } from '@ngrx/store';
 import * as ShoppingListActions from '../store/shopping-list.actions';
 
 @Component({

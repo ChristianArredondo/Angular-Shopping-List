@@ -25,7 +25,6 @@ import { shoppingListReducer } from './shopping-list/store';
     ShoppingListModule,
     StoreModule.forRoot({shoppingList: shoppingListReducer})
   ],
-  providers: [StoreModule],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
