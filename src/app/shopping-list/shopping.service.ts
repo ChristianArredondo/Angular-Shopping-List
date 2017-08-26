@@ -18,10 +18,11 @@ export class ShoppingService {
     return this.ingredients[index];
   }
 
-  onIngredientAdded(ingredient: Ingredient) {
-    this.ingredients.push(ingredient);
+  onIngredientsAdded(ingredients: Ingredient[]) {
+    // for (let ingredient of ingredients)
+    //   this.ingredients.push(ingredient);
+    this.ingredients.push(...ingredients);
     this.ingredientsChanged.next(this.ingredients.slice());
-    console.log(this.ingredients);
   }
 
   updateIngredient(index: number, newIngredient: Ingredient) {
