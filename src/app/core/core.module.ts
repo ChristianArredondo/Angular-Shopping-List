@@ -3,8 +3,11 @@ import {
   HeaderComponent,
   HomeComponent
 } from './';
-import { SharedModule } from '../shared';
+import { SharedModule, DataStorageService } from '../shared';
 import { AppRoutingModule } from '../app-routing.module';
+import { RecipeService } from '../recipes';
+import { AuthService } from '../auth';
+import { ShoppingService } from '../shopping-list';
 
 @NgModule({
   declarations: [
@@ -18,6 +21,12 @@ import { AppRoutingModule } from '../app-routing.module';
   exports: [
     AppRoutingModule,
     HeaderComponent
+  ],
+  providers: [
+    DataStorageService,
+    RecipeService,
+    AuthService,
+    ShoppingService
   ]
 })
 export class CoreModule {

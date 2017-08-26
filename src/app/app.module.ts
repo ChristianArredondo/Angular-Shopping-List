@@ -15,16 +15,14 @@ import { CoreModule } from './core';
     AppComponent
   ],
   imports: [
+    AuthModule,
     BrowserModule,
+    CoreModule,
     HttpModule,
     SharedModule,
     ShoppingListModule,
-    AuthModule,
-    CoreModule
   ],
-  providers: [
-    DataStorageService,
-  ],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

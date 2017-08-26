@@ -18,9 +18,6 @@ import { FormsModule } from '@angular/forms';
     CommonModule,
     ShoppingListRoutingModule,
     FormsModule
-  ],
-  providers: [
-    ShoppingService
   ]
 })
 export class ShoppingListModule {

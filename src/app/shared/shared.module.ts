@@ -12,9 +12,6 @@ import { RecipeService } from '../recipes';
   exports: [
     MenuToggleDirective,
     CommonModule
-  ],
-  providers: [
-    RecipeService
   ]
 })
 export class SharedModule {

@@ -8,7 +8,6 @@ import {
   SigninComponent,
   SignupComponent,
  } from './';
-import { CommonModule } from '@angular/common/';
 
 @NgModule({
   declarations: [
@@ -16,13 +15,8 @@ import { CommonModule } from '@angular/common/';
     SignupComponent,
   ],
   imports: [
-    CommonModule,
     AuthRoutingModule,
     FormsModule
-  ],
-  providers: [
-    AuthGuard,
-    AuthService,
   ]
 })
 export class AuthModule {

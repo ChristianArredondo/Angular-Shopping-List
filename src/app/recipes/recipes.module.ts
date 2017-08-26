@@ -9,6 +9,7 @@ import {
   RecipesComponent,
   RecipeStartComponent,
   RecipesRoutingModule,
+  RecipeService,
 } from './';
 import { ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
@@ -30,12 +31,6 @@ import { SharedModule } from '../shared/shared.module';
     RecipesRoutingModule,
     SharedModule,
   ],
-  providers: [
-
-  ],
-  entryComponents: [
-
-  ]
 })
 export class RecipesModule {
 
