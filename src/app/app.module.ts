@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { StoreModule } from '@ngrx/store';
 
 import { AppComponent } from './app.component';
 import { HttpModule } from '@angular/http/';
@@ -8,6 +9,7 @@ import { SharedModule } from './shared/shared.module';
 import { AuthModule } from './auth';
 import { ShoppingListModule } from './shopping-list';
 import { CoreModule } from './core';
+import { shoppingListReducer } from './shopping-list';
 
 
 @NgModule({
@@ -21,6 +23,9 @@ import { CoreModule } from './core';
     HttpModule,
     SharedModule,
     ShoppingListModule,
+    StoreModule.forRoot({
+      shoppingList: shoppingListReducer
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]
