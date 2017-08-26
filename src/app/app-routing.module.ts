@@ -8,11 +8,12 @@ import { RecipeEditComponent } from './recipes/recipe-edit/recipe-edit.component
 import { SignupComponent } from './auth/signup/signup.component';
 import { SigninComponent } from './auth/signin/signin.component';
 import { AuthGuard } from './auth/auth-guard.service';
-import { HomeComponent } from './core';
+import { HomeComponent } from './core/home';
 
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
+  { path: 'shopping', component: ShoppingListComponent },
   { path: 'recipes', loadChildren: './recipes/recipes.module#RecipesModule'}
 ]
 

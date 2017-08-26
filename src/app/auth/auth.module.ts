@@ -1,13 +1,11 @@
 import { NgModule } from '@angular/core/';
 import { FormsModule } from '@angular/forms';
 
-import {
-  AuthGuard,
-  AuthRoutingModule,
-  AuthService,
-  SigninComponent,
-  SignupComponent,
- } from './';
+import { AuthGuard } from './auth-guard.service';
+import { AuthRoutingModule } from './auth-routing.module';
+import { AuthService } from './auth.service';
+import { SigninComponent } from './signin';
+import { SignupComponent } from './signup';
 
 @NgModule({
   declarations: [

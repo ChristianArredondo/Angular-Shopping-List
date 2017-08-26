@@ -1,7 +1,7 @@
 import { Component, Output, Injectable } from '@angular/core';
 import { DataStorageService } from '../../shared';
 import { Headers, Http, Response } from '@angular/http/';
-import { AuthService } from '../../auth';
+import { AuthService } from '../../auth/auth.service';
 
 @Injectable()
 @Component({

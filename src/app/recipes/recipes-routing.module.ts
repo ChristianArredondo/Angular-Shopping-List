@@ -1,15 +1,11 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { AuthGuard } from '../auth/auth-guard.service';
-import {
-  Recipe,
-  RecipeDetailComponent,
-  RecipeEditComponent,
-  RecipeItemComponent,
-  RecipeListComponent,
-  RecipesComponent,
-  RecipeStartComponent,
-} from './';
+import { RecipesComponent } from '../recipes/recipes.component';
+import { RecipeStartComponent } from '../recipes/recipe-start';
+import { RecipeEditComponent } from '../recipes/recipe-edit';
+import { RecipeDetailComponent } from '../recipes/recipe-detail';
+
 
 const recipesRoutes: Routes = [
   { path: '', component: RecipesComponent, children: [

@@ -1,13 +1,12 @@
 import { NgModule } from '@angular/core';
-import {
-  HeaderComponent,
-  HomeComponent
-} from './';
+import { HeaderComponent } from './header';
+import { HomeComponent } from './home';
+
 import { SharedModule, DataStorageService } from '../shared';
 import { AppRoutingModule } from '../app-routing.module';
-import { RecipeService } from '../recipes';
-import { AuthService } from '../auth';
-import { ShoppingService } from '../shopping-list';
+import { RecipeService } from '../recipes/recipe.service';
+import { AuthService } from '../auth/auth.service';
+import { ShoppingService } from '../shopping-list/shopping.service';
 
 @NgModule({
   declarations: [
