@@ -7,9 +7,7 @@ const shoppingListRoutes: Routes = [
 ];
 
 @NgModule({
-  imports: [
-    RouterModule.forChild(shoppingListRoutes)
-  ],
+  imports: [RouterModule.forChild(shoppingListRoutes)],
   exports: [RouterModule],
 })
 export class ShoppingListRoutingModule {
