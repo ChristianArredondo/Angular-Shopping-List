@@ -8,10 +8,10 @@ import {
   RecipeListComponent,
   RecipesComponent,
   RecipeStartComponent,
-} from '../recipes';
+  RecipesRoutingModule,
+} from './';
 import { ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
-import { RecipesRoutingModule } from './recipes-routing.module';
 import { MenuToggleDirective } from '../shared/menu-toggle.directive';
 import { SharedModule } from '../shared/shared.module';
 

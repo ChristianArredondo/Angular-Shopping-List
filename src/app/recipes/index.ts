@@ -5,5 +5,5 @@ export { RecipeStartComponent } from './recipe-start';
 export { RecipesComponent } from './recipes.component';
 export { Recipe } from './recipes.model';
 export { RecipeService } from './recipe.service';
-
+export { RecipesRoutingModule } from './recipes-routing.module';
 

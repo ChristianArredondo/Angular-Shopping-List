@@ -9,7 +9,7 @@ import {
   RecipeListComponent,
   RecipesComponent,
   RecipeStartComponent,
-} from '../recipes';
+} from './';
 
 const recipesRoutes: Routes = [
   { path: 'recipes', component: RecipesComponent, children: [

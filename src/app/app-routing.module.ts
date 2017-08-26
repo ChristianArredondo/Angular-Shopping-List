@@ -11,10 +11,7 @@ import { AuthGuard } from './auth/auth-guard.service';
 
 
 const appRoutes: Routes = [
-  { path: '', redirectTo: '/recipes', pathMatch: 'full' },
-  { path: 'shopping', component: ShoppingListComponent },
-  { path: 'signup', component: SignupComponent },
-  { path: 'login', component: SigninComponent }
+  { path: '', redirectTo: '/recipes', pathMatch: 'full' }
 ]
 
 @NgModule({
