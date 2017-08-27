@@ -9,7 +9,7 @@ import { NgForm, Form } from '@angular/forms';
 import { Subscription } from 'rxjs/Subscription';
 import { Store } from '@ngrx/store';
 import * as ShoppingListActions from '../store/shopping-list.actions';
-import * as fromShoppingList from '../store/shopping-list.reducers';
+import * as fromApp from '../../store/app.reducers';
 
 @Component({
   selector: 'app-shopping-list-edit',
@@ -24,7 +24,7 @@ export class ShoppingListEditComponent implements OnInit, OnDestroy {
   editedItem: Ingredient;
 
   constructor(
-    private store: Store<fromShoppingList.AppState>
+    private store: Store<fromApp.AppState>
   ) { }
 
   ngOnInit() {
@@ -66,9 +66,9 @@ onDeleteItem (i: number) {
     this.clearForm();
   }
 
-  ngOnDestroy () {
-      this.subscription.unsubscribe();
-      this.store.dispatch( new ShoppingListActions.StopEdit());
-    }
+ngOnDestroy () {
+    this.subscription.unsubscribe();
+    this.store.dispatch( new ShoppingListActions.StopEdit());
+  }
 
 }
