@@ -1,7 +1,11 @@
-import { Component, Output, Injectable } from '@angular/core';
+import { Component, Output, Injectable, OnInit } from '@angular/core';
 import { DataStorageService } from '../../shared';
 import { Headers, Http, Response } from '@angular/http/';
 import { AuthService } from '../../auth/auth.service';
+import { Store } from '@ngrx/store';
+import * as fromAppState from '../../store/app.reducers';
+import * as fromAuth from '../../auth/store/auth.reducer';
+import { Observable } from 'rxjs/Observable';
 
 @Injectable()
 @Component({
@@ -11,13 +15,18 @@ import { AuthService } from '../../auth/auth.service';
 
 })
 
-
-export class HeaderComponent {
+export class HeaderComponent implements OnInit {
+  authState: Observable<fromAuth.State>
 
   constructor(
     private dataStorageService: DataStorageService,
-    public authService: AuthService
+    private authService: AuthService,
+    private store: Store<fromAppState.AppState>
   ) {}
+
+  ngOnInit () {
+    this.authState = this.store.select('auth');
+  }
 
   onStoreRecipes () {
     this.dataStorageService.storeRecipes()
