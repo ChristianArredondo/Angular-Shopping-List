@@ -31,7 +31,7 @@ export class HeaderComponent implements OnInit {
   onStoreRecipes () {
     this.dataStorageService.storeRecipes()
       .subscribe(
-        (response: Response) => console.log(response)
+        response => console.log(response)
       )
   }
 
@@ -40,6 +40,7 @@ export class HeaderComponent implements OnInit {
   }
 
   onFetchRecipes () {
-    this.dataStorageService.fetchRecipes();
+    // this.dataStorageService.fetchRecipes();
+    this.dataStorageService.getRecipes();
   }
 }

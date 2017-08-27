@@ -3,13 +3,14 @@ import { NgModule } from '@angular/core';
 import { StoreModule, Store } from '@ngrx/store';
 
 import { AppComponent } from './app.component';
-import { HttpModule } from '@angular/http/';
+// import { HttpClientModule } from '@angular/http/';
 import { DataStorageService } from './shared/data-storage.service';
 import { SharedModule } from './shared/shared.module';
 import { AuthModule } from './auth';
 import { ShoppingListModule } from './shopping-list';
 import { CoreModule } from './core';
 import { reducers } from './store/app.reducers';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -20,7 +21,7 @@ import { reducers } from './store/app.reducers';
     AuthModule,
     BrowserModule,
     CoreModule,
-    HttpModule,
+    HttpClientModule,
     SharedModule,
     ShoppingListModule,
     StoreModule.forRoot(reducers)
