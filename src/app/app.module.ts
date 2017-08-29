@@ -11,6 +11,8 @@ import { ShoppingListModule } from './shopping-list';
 import { CoreModule } from './core';
 import { reducers } from './store/app.reducers';
 import { HttpClientModule } from '@angular/common/http';
+import { EffectsModule } from '@ngrx/effects';
+import { AuthEffects } from './auth/store/auth.effects';
 
 
 @NgModule({
@@ -24,7 +26,8 @@ import { HttpClientModule } from '@angular/common/http';
     HttpClientModule,
     SharedModule,
     ShoppingListModule,
-    StoreModule.forRoot(reducers)
+    StoreModule.forRoot(reducers),
+    EffectsModule.forRoot([AuthEffects])
   ],
   bootstrap: [AppComponent]
 })
