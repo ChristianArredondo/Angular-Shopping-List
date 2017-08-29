@@ -14,16 +14,12 @@ export class DataStorageService {
   }
 
   storeRecipes() {
-    // return this.http.put(
-      // 'https://ng-recipe-book-d07b5.firebaseio.com/recipes.json?auth=' + token,
-    //   this.recipeService.getRecipes()
     const req = new HttpRequest('PUT', 'https://ng-recipe-book-d07b5.firebaseio.com/recipes.json',
       this.recipeService.getRecipes(), {reportProgress: true});
     return this.httpClient.request(req);
   }
 
   getRecipes() {
-    // 'https://ng-recipe-book-d07b5.firebaseio.com/recipes.json?auth=' + token,
     this.httpClient.get<Recipe[]>('https://ng-recipe-book-d07b5.firebaseio.com/recipes.json', {
       observe: 'body',
       responseType: 'json'
@@ -46,4 +42,3 @@ export class DataStorageService {
       );
   }
 }
-// 'https:ng-recipe-book-d07b5.firebaseio.com/recipes.json?auth=' + token)
