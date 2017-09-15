@@ -33,6 +33,32 @@ export class AuthEffects {
       ];
     });
 
+    @Effect()
+    authLogin = this.actions$
+      .ofType(AuthActions.TRY_LOGIN)
+      .map((action: AuthActions.TryLogin) => {
+        return action.payload;
+      })
+      .switchMap((authData: {email: string, password: string}) => {
+        return fromPromise(firebase.auth().signInWithEmailAndPassword(authData.email, authData.password));
+      })
+      .switchMap(() => {
+        return fromPromise(firebase.auth().currentUser.getIdToken());
+      })
+      .mergeMap((token: string) => {
+        return [
+          {
+            type: AuthActions.LOGIN
+          },
+          {
+            type: AuthActions.SET_TOKEN,
+            payload: token
+          }
+        ]
+      })
+
+
+
   constructor(private actions$: Actions) {
 
   }
