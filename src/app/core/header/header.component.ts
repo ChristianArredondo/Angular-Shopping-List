@@ -1,10 +1,10 @@
 import { Component, Output, Injectable, OnInit } from '@angular/core';
 import { DataStorageService } from '../../shared';
 import { Headers, Http, Response } from '@angular/http/';
-import { AuthService } from '../../auth/auth.service';
 import { Store } from '@ngrx/store';
 import * as fromAppState from '../../store/app.reducers';
 import * as fromAuth from '../../auth/store/auth.reducer';
+import * as AuthActions from '../../auth/store/auth.actions';
 import { Observable } from 'rxjs/Observable';
 
 @Injectable()
@@ -20,7 +20,6 @@ export class HeaderComponent implements OnInit {
 
   constructor(
     private dataStorageService: DataStorageService,
-    private authService: AuthService,
     private store: Store<fromAppState.AppState>
   ) {}
 
@@ -36,7 +35,7 @@ export class HeaderComponent implements OnInit {
   }
 
   onLogout () {
-    this.authService.logoutUser();
+    this.store.dispatch(new AuthActions.Logout());
   }
 
   onFetchRecipes () {
