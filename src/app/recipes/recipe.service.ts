@@ -37,23 +37,4 @@ export class RecipeService {
      return this.recipes.slice();
   }
 
-  getRecipe (id: number) {
-    return this.recipes[id]
-  }
-
-  addRecipe (r: Recipe) {
-    this.recipes.push(r);
-    this.recipesChanged.next(this.recipes.slice());
-  }
-
-  deleteRecipe (i: number) {
-    this.recipes.splice(i, 1);
-    this.recipesChanged.next(this.recipes.slice());
-  }
-
-  updateRecipe (i: number, r: Recipe) {
-    this.recipes[i] = r;
-    this.recipesChanged.next(this.recipes.slice());
-  }
-
 }
