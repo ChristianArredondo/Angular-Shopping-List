@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { EffectsModule } from '@ngrx/effects';
-import { RecipeService } from './recipe.service';
 import { RecipeDetailComponent } from './recipe-detail';
 
 import { RecipeEditComponent } from './recipe-edit';

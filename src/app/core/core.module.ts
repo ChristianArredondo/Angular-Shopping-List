@@ -3,11 +3,9 @@ import { NgModule } from '@angular/core';
 import { HeaderComponent } from './header';
 import { HomeComponent } from './home';
 
-import { SharedModule, DataStorageService } from '../shared';
+import { SharedModule } from '../shared';
 import { AppRoutingModule } from '../app-routing.module';
-import { RecipeService } from '../recipes/recipe.service';
 import { AuthInterceptor } from '../shared/auth.interceptor';
-// import { LoggingInterceptor } from '../shared/logging.interceptor';
 
 @NgModule({
   declarations: [
@@ -23,8 +21,6 @@ import { AuthInterceptor } from '../shared/auth.interceptor';
     HeaderComponent
   ],
   providers: [
-    DataStorageService,
-    RecipeService,
     {provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true},
   ]
 })

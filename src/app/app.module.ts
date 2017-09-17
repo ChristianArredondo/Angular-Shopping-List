@@ -4,7 +4,6 @@ import { StoreModule, Store } from '@ngrx/store';
 
 import { AppComponent } from './app.component';
 // import { HttpClientModule } from '@angular/http/';
-import { DataStorageService } from './shared/data-storage.service';
 import { SharedModule } from './shared/shared.module';
 import { AuthModule } from './auth';
 import { ShoppingListModule } from './shopping-list';
